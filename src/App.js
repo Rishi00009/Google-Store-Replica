@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Fitbit from './components/Fitbit';
+import Wearables from './components/Wearables';
+import Hero from './components/Hero';
+import Arrivals from './components/Arrivals';
+import Compare from './components/Compare';
+import Footer from './components/Footer';
+import Watch4 from './components/Watch4';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Fitbit />
+      <Hero />
+      <Wearables />
+      <Arrivals />
+      <Compare />
+      <Watch4 />
+      <Footer />
     </div>
   );
 }
