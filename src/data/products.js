@@ -7,7 +7,7 @@ export const products = [
     description: 'Meet the new status pro.',
     price: '₹1,09,999',
     monthlyPrice: 'From ₹4,166.62/mo',
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop',
+    image: 'https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/GP10PX256M_google_pixel_10_pro_xl_256g_moonstone.jpg',
     badge: 'New',
     category: 'phones',
     offer: 'with no-cost EMI & instant savings',
@@ -19,7 +19,7 @@ export const products = [
     description: 'Light ears ahead.',
     price: '₹22,900',
     monthlyPrice: '₹1,029.84/mo',
-    image: 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400&h=400&fit=crop',
+    image: 'https://m.media-amazon.com/images/I/61g25OOZCJL._UF1000,1000_QL80_.jpg',
     badge: 'New',
     category: 'earbuds',
     offer: 'with low-cost EMI',
@@ -31,7 +31,7 @@ export const products = [
     description: 'Unfold extraordinary.',
     price: '₹1,72,999',
     monthlyPrice: '₹6,791.62/mo',
-    image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop',
+    image: 'https://www.designinfo.in/wp-content/uploads/2020/12/Google-Pixel-10-Pro-Fold-5G-Moonstone-7-485x485-optimized.webp',
     badge: 'New',
     category: 'phones',
     offer: 'with no-cost EMI & instant savings',
@@ -167,6 +167,48 @@ export const fitbitPremium = {
   cta: 'Learn more'
 };
 
+
+
+// Legal Disclaimers and Footnotes
+export const legalDisclaimers = {
+  pixelWatch: {
+    id: 1,
+    text: "Works with most phones running on Android 11.0 or newer. Requires Google Account, Google Pixel Watch app, and internet access. Some features require a Fitbit mobile app and/or paid subscription. Google apps and services and Fitbit Premium content and features are subject to change and may not be available in all countries or languages. Google Pixel Watch is not compatible with Android (Go edition). See g.co/pixelwatch/specs for technical and device specifications."
+  },
+  fitbitRequirements: {
+    id: 2,
+    text: "Requires Fitbit mobile app, a Google Account, compatible Android device, and internet connection. Fitbit Premium content and features may change. Content recommendations are not available in all countries and may be in English only."
+  },
+  fitbitPremiumOffer: {
+    id: 4,
+    text: "With eligible device purchases. New and returning Fitbit Premium members only. Must activate membership within 60 days of device activation. Valid method of payment required. Auto-renews at ₹99.00/month after expiry of 6-month membership unless cancelled earlier. Cancel anytime. Content and features may change, are not available in all countries and may be in English only. See g.co/pixelwatch/fitbitpremium-tos for more details."
+  },
+  googleServices: {
+    id: 5,
+    text: "Google apps and services require LTE or a paired phone within Bluetooth range of your device and are not available in all countries or languages. Data rates may apply."
+  }
+};
+
+export const disclaimerFootnotes = [
+  {
+    id: 1,
+    text: "Works with most phones running on Android 11.0 or newer. Requires Google Account, Google Pixel Watch app, and internet access. Some features require a Fitbit mobile app and/or paid subscription. Google apps and services and Fitbit Premium content and features are subject to change and may not be available in all countries or languages. Google Pixel Watch is not compatible with Android (Go edition). See g.co/pixelwatch/specs for technical and device specifications."
+  },
+  {
+    id: 2,
+    text: "Requires Fitbit mobile app, a Google Account, compatible Android device, and internet connection. Fitbit Premium content and features may change. Content recommendations are not available in all countries and may be in English only."
+  },
+  {
+    id: 4,
+    text: "With eligible device purchases. New and returning Fitbit Premium members only. Must activate membership within 60 days of device activation. Valid method of payment required. Auto-renews at ₹99.00/month after expiry of 6-month membership unless cancelled earlier. Cancel anytime. Content and features may change, are not available in all countries and may be in English only. See g.co/pixelwatch/fitbitpremium-tos for more details."
+  },
+  {
+    id: 5,
+    text: "Google apps and services require LTE or a paired phone within Bluetooth range of your device and are not available in all countries or languages. Data rates may apply."
+  }
+];
+
+// Footer Sections Data
 export const footerSections = {
   orders: [
     'EMI & Cashback',
@@ -185,20 +227,41 @@ export const footerSections = {
   ],
   sustainability: [
     'Device recycling'
-  ],
-  legal: [
-    'Privacy',
-    'Google Nest Commitment to Privacy',
-    'Sales Terms',
-    'Terms of Service'
   ]
 };
+
+export const socialMediaLinks = [
+  
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com',
+    icon: 'https://img.icons8.com/?size=100&id=cMRBi0rI3iwb&format=png&color=000000'
+  },
+  {
+    name: 'Instagram',
+    url: 'https://instagram.com',
+    icon: 'https://img.icons8.com/?size=100&id=GEBzwByLyRUr&format=png&color=4D4D4D'
+  },
+  {
+    name: 'Facebook',
+    url: 'https://facebook.com',
+    icon: 'https://img.icons8.com/?size=100&id=8818&format=png&color=4D4D4D'
+  },
+  {
+    name: 'YouTube',
+    url: 'https://youtube.com',
+    icon: 'https://img.icons8.com/?size=100&id=GmXJpb87D1Wb&format=png&color=4D4D4D'
+  }
+];
+
 
 // Helper functions
 export const getFeaturedProducts = () => products.filter(product => product.featured);
 export const getProductsByCategory = (category) => products.filter(product => product.category === category);
 export const getNewArrivals = () => products.filter(product => product.badge === 'New');
 export const getComingSoon = () => products.filter(product => product.badge === 'Coming soon');
+export const getLegalDisclaimer = (id) => legalDisclaimers[id];
+export const getAllFootnotes = () => disclaimerFootnotes;
 
 export default {
   products,
@@ -209,8 +272,12 @@ export default {
   accessories,
   fitbitPremium,
   footerSections,
+  legalDisclaimers,
+  disclaimerFootnotes,
   getFeaturedProducts,
   getProductsByCategory,
   getNewArrivals,
-  getComingSoon
+  getComingSoon,
+  getLegalDisclaimer,
+  getAllFootnotes
 };

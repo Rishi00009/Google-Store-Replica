@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const navigationItems = [
     'Phones',

@@ -1,4 +1,4 @@
-import { products } from "../data/products";
+import { products } from "../../data/products";
 import watch4bg from "./watch4bg.png";
 import Fitbit6bg from "./Fitbit6bg.png";
 import Fitbit2bg from "./Fitbit2bg.png";
